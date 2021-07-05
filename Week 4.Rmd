@@ -1,7 +1,11 @@
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 Project_Synopsis
-Data is analysed for storm and severe weather effects on society. Two folds objective: first, recognize the events detrimental to public health and second, recognize
-those which have most severe economic consequences. The data is taken from NOAA Strom database (1950-2011)
+Data is analysed for storm and severe weather effects
+on society. Two folds objective: first, recognize the
+eventsdetrimental to public health and second, 
+recognizethose which have most severe economic
+consequences. The data is taken from NOAA Strom
+database (1950-2011)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -104,7 +108,8 @@ plot(health.totals$EVTYPE,
      main = "Most Harmful Event Type in the United States")
 ```
 # 2. Population Health Assessment
-Tornado is the largest contributor to the severity in the public health. This however is not conclusive and require further investigation.
+Tornado is the largest contributor to the severity in the public health.
+This however is not conclusive and require further investigation.
 # 3. Economic Impact 
 ```{r Economic Total}
 economic.total <- aggregate(cbind(PROPDMG,CROPDMG, total) ~ EVTYPE, data = property, sum, na.rm=TRUE)
@@ -124,4 +129,5 @@ plot(economic.crop$EVTYPE,
      main = "Economic Impact of Weather on Crop Damage")
 ```     
 # 4. Economic Impact Assessment
-Drought has the largest effect on the crop whereas the flood contributes most severe impact on the public health.
+Drought has the largest effect on the crop whereas the flood contributes 
+most severe impact on the public health.
